@@ -46,6 +46,88 @@ h6 {
   font-family: var(--font-primary);
 }
 
+
+.social{
+    position: fixed;
+    top:50%;
+    left:20px;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+.social ul{
+    margin: -20px;
+    padding: 0;
+}
+.social ul li{
+    list-style: none;
+    margin: 5px 0;
+}
+.social ul li a{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    color: #0000;
+    display: block;
+    text-align: center;
+    position: relative;
+    background: #dfb163;
+}
+.social ul li a span{
+    position: absolute;
+    top: 0;
+    left: -120px;
+    width: 120px;
+    height: 50px;
+    color: #0000;
+    background: #dfb163;
+    font-size: 15px;
+    font-weight: 500;
+    z-index: -1;
+    backface-visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+}
+.social ul li:hover span{
+    backface-visibility: visible;
+    opacity: 1;
+    left: 50px;
+}
+@media only screen and (max-width: 767px){
+    .social ul li a{
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 14px;
+        color: #000;
+        display: block;
+        text-align: center;
+        position: relative;
+        background: #dfb163;
+    }
+    .social ul li a span{
+        position: absolute;
+        top: 0;
+        left: -120px;
+        width: 80px;
+        height: 30px;
+        color: #0000;
+        background: #dfb163;
+        font-size: 14px;
+        z-index: -1;
+        backface-visibility: hidden;
+        opacity: 0;
+        transition: .5s;
+    }
+    .social ul li:hover span{
+        backface-visibility: visible;
+        opacity: 1;
+        left: 30px;
+    }
+}
+
+
+
 /*--------------------------------------------------------------
 # Sections & Section Header
 --------------------------------------------------------------*/
@@ -81,6 +163,7 @@ h6 {
   font-weight: 700;
   font-family: var(--font-secondary);
   color: #fff;
+  text-align: center;
 }
 
 /*--------------------------------------------------------------
@@ -345,28 +428,6 @@ h6 {
   }
 }
 
-.header .header-social-links {
-  padding-right: 15px;
-}
-
-.header .header-social-links a {
-  color: rgba(255, 255, 255, 0.5);
-  padding-left: 15px;
-  display: inline-block;
-  line-height: 0px;
-  transition: 0.3s;
-  font-size: 16px;
-}
-
-.header .header-social-links a:hover {
-  color: #fff;
-}
-
-@media (max-width: 575px) {
-  .header .header-social-links a {
-    padding-left: 5px;
-  }
-}
 
 /*--------------------------------------------------------------
 # Desktop Navigation
@@ -637,13 +698,13 @@ h6 {
 # Testimonials Section
 --------------------------------------------------------------*/
 .testimonials {
-  margin-top: 80px;
+  margin-top: 30px;
 }
 
 .testimonials .testimonial-item {
   box-sizing: content-box;
   padding: 30px;
-  margin: 40px 30px;
+  margin: 20px 3px;
   background: var(--color-secondary);
   min-height: 320px;
   display: flex;
@@ -662,8 +723,7 @@ h6 {
 }
 
 .testimonials .testimonial-item .testimonial-img {
-  width: 90px;
-  border-radius: 50%;
+  width: 270px;
   border: 5px solid #474a4d;
   margin: 0 auto;
 }
@@ -815,7 +875,7 @@ h6 {
 .gallery-single .swiper-button-prev,
 .gallery-single .swiper-button-next {
   width: 48px;
-  height: 48px;
+  height: auto;
 }
 
 .gallery-single .swiper-button-prev:after,
@@ -1297,3 +1357,5 @@ h6 {
 .footer .credits a {
   color: var(--color-primary);
 }
+
+
